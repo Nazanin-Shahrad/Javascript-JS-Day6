@@ -57,11 +57,89 @@ body {
     background-color: rgba(250,88,78,0.7);
 }
 
+.split.right , .split.left , .split.right::before , .split.left::before {
+    transition: all 1000ms ease-in-out;
+    -webkit-transition: all 1000ms ease-in-out;
+    -moz-transition: all 1000ms ease-in-out;
+    -ms-transition: all 1000ms ease-in-out;
+    -o-transition: all 1000ms ease-in-out;
+}
+
 h1 {
     font-size: 2rem;
     position: absolute;
     color: #fff;
     top: 25%;
     left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    white-space: nowrap;
+}
 
+.btn{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border: 1px solid #fff;
+    font-size: 1rem;
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+
+.split.left .btn:hover{
+    background-color: rgb(100,150,100);
+    border-color:rgb(100,150,100);
+}
+
+.split.right .btn:hover{
+    background-color: rgb(93,50,100);
+    border-color:rgb(93,50,100);
+}
+
+
+.hover-left .left {
+    width: 75%;
+}
+
+
+.hover-left .right {
+    width: 25%;
+}
+
+
+.hover-right .left {
+    width: 25%;
+}
+
+
+.hover-right .right {
+    width: 75%;
+}
+
+
+@media (max-width: 700px){
+    h1{
+        font-size: 2rem;
+        top: 30%;
+    }
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
 }
